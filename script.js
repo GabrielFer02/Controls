@@ -41,11 +41,26 @@ function cssText() {
 }
 
 function handleChange(event) {
-  const value = event.target.value;
   const name = event.target.name;
+  const value = event.target.value;
 
   styleChange[name](value);
   cssText();
+  saveValuetoStorage(name, value);
 }
 
 formControls.addEventListener("change", handleChange);
+
+setValuesInPage();
+
+function saveValuetoStorage(name, value) {
+  localStorage[name] = value;
+}
+
+function setValuesInPage() {
+  Object.keys(localStorage).forEach((item) => {
+    formControls.elements[item].value = localStorage[item];
+    styleChange[item](localStorage[item]);
+  });
+  cssText();
+}
