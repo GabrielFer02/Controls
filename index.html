@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Controles">
+  <title>Controls</title>
+
+  <link rel="preload" href="./style.css" as="style">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Playfair+Display+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <section class="button-creator">
+    <form action="#" id="controls">
+      <label for="text">text</label>
+      <input type="text" id="text" name="text">
+      <label for="color">color</label>
+      <input type="color" id="color" name="color">
+      <label for="backgroundColor">background-color</label>
+      <input type="color" id="backgroundColor" name="backgroundColor">
+      <label for="height">height</label>
+      <input type="range" id="height" name="height" min="0" max="200">
+      <label for="width">width</label>
+      <input type="range" id="width" name="width" min="0" max="600">
+      <label for="border">border</label>
+      <input type="text" id="border" name="border" placeholder="Ex: 2px solid purple">
+      <label for="borderRadius">border-radius</label>
+      <input type="range" id="borderRadius" name="borderRadius" min="0" max="20">
+      <select name="fontFamily" id="fontFamily">
+        <option value="Arial">Arial</option>
+        <option value="Georgia">Georgia</option>
+        <option value="monospace">Monospace</option>
+      </select>
+      <label for="fontSize">font-size</label>
+      <input type="number" id="fontSize" name="fontSize">
+    </form>
+    <section class="result">
+      <button class="button">Clique</button>
+      <pre><code class="css"></code></pre>
+    </section>
+  </section>
+  <script src="./script.js"></script>
+</body>
+
+</html>
